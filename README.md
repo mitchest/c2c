@@ -1,6 +1,6 @@
 c2c
 ===========
-[![Build Status](https://travis-ci.org/mitchest/c2c.svg?branch=master)](https://travis-ci.org/mitchest/c2c)  
+[![Build Status](https://api.travis-ci.org/mitchest/c2c.svg)](https://travis-ci.org/mitchest/c2c)  
 
 ## What is c2c??
 An R package for comparing two classifications or clustering

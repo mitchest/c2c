@@ -20,7 +20,7 @@
 #' @keywords confusion matrix
 #'
 #' @examples
-#' to come
+#' #to come
 #'
 #' @export
 

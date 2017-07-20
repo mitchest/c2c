@@ -25,7 +25,7 @@ A confusion matrix
 Takes inputs A and B (converting labels to matrices if required) and combines them via (\eqn{A^TB}). Soft classifications will neccesarily be matrices. Hard classifications can be given as a binary matrix of membership or a vector of labels. For matrix inputs, rows should represent individual sites, observations, cases etc., and columns should represent classes. For class label inputs, the vector should be ordered similar by site, observation, case etc; they will be converted to a binary matrix (see \code{\link[c2c]{labels_to_matrix}}). Classes from matrix A are represented by columns of the output, and classes from matrix B are represented by the rows. Class names inherited from \code{names()} or \code{colnames()}.
 }
 \examples{
-to come
+#to come
 
 }
 \references{

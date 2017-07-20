@@ -1,5 +1,7 @@
 #' @title Decompose soft (fuzzy, probabalistic) membership to hard binary matrix
 #'
+#' @description Used in \code{\link[c2c]{get_conf_mat}} but might be useful separately
+#'
 #' @param x A matrix or data frame (or something coercible to a matrix) containing memberships - rows are sites (observations, cases etc.) columns are classes
 #'
 #' @return Binary matrix of class membership. Class names inherited from \code{names()} or \code{colnames()}.

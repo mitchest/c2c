@@ -12,6 +12,9 @@ get_hard(x)
 \value{
 Binary matrix of class membership. Class names inherited from \code{names()} or \code{colnames()}.
 }
+\description{
+Used in \code{\link[c2c]{get_conf_mat}} but might be useful separately
+}
 \examples{
 my_mat <- matrix(runif(20,0,1), nrow = 4)
 get_hard(my_mat)

@@ -12,6 +12,9 @@ labels_to_matrix(x)
 \value{
 Binary matrix of class membership.
 }
+\description{
+Used in \code{\link[c2c]{get_conf_mat}} but might be useful separately
+}
 \examples{
 my_labels <- rep(c("a","b","c","d"), 5)
 labels_to_matrix(my_labels)

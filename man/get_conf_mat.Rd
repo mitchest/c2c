@@ -25,14 +25,34 @@ A confusion matrix
 Takes inputs A and B (converting labels to matrices if required) and combines them via (\eqn{A^TB}). Soft classifications will neccesarily be matrices. Hard classifications can be given as a binary matrix of membership or a vector of labels. For matrix inputs, rows should represent individual sites, observations, cases etc., and columns should represent classes. For class label inputs, the vector should be ordered similarly by site, observation, case etc; they will be converted to a binary matrix (see \code{\link[c2c]{labels_to_matrix}}). Classes from matrix A are represented by rows of the output, and classes from matrix B are represented by the columns Class names inherited from \code{names()} or \code{colnames()}.
 }
 \examples{
-#to come
+# meaningless data, but you get the idea
+
+# compare two soft classifications
+my_soft_mat1 <- matrix(runif(50,0,1), nrow = 10, ncol = 5)
+my_soft_mat2 <- matrix(runif(30,0,1), nrow = 10, ncol = 3)
+# make the confusion matrix and calculate stats
+conf_mat <- get_conf_mat(my_soft_mat1, my_soft_mat2)
+conf_mat; calculate_clustering_metrics(conf_mat)
+
+# compare a soft classificaiton to a vector of hard labels
+my_labels <- rep(c("a","b","c"), length.out = 10)
+conf_mat <- get_conf_mat(my_soft_mat1, my_labels) # utilises labels_to_matrix(my_labels)
+conf_mat; calculate_clustering_metrics(conf_mat)
+
+# make one of the soft matrices hard
+conf_mat <- get_conf_mat(my_soft_mat1, my_soft_mat2, make.B.hard = T) # utilises get_hard(my_soft_mat2)
+conf_mat; calculate_clustering_metrics(conf_mat)
+
+# use two classificaitons with same number of classes, so percentage agreement can be calculated
+conf_mat <- get_conf_mat(my_soft_mat1, my_soft_mat1)
+conf_mat; calculate_clustering_metrics(conf_mat)
 
 }
 \references{
 Lyons et al. 2017. Simultaneous vegetation classification and mapping at large spatial scales. \emph{Journal of Biogeography}.
 }
 \seealso{
-functions that calculate metrics, function that build binary matrix, function that decomposes to hard membership
+\code{\link[c2c]{calculate_clustering_metrics}}, \code{\link[c2c]{labels_to_matrix}}, \code{\link[c2c]{get_hard}}
 }
 \author{
 Mitchell Lyons

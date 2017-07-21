@@ -30,14 +30,16 @@ conf_mat; calculate_clustering_metrics(conf_mat)
 
 # compare a soft classificaiton to a vector of hard labels
 my_labels <- rep(c("a","b","c"), length.out = 10)
-conf_mat <- get_conf_mat(my_soft_mat1, my_labels) # utilises labels_to_matrix(my_labels)
+# utilising labels_to_matrix(my_labels)
+conf_mat <- get_conf_mat(my_soft_mat1, my_labels)
 conf_mat; calculate_clustering_metrics(conf_mat)
 
 # make one of the soft matrices hard
-conf_mat <- get_conf_mat(my_soft_mat1, my_soft_mat2, make.B.hard = T) # utilises get_hard(my_soft_mat2)
+# utilising get_hard(my_soft_mat2)
+conf_mat <- get_conf_mat(my_soft_mat1, my_soft_mat2, make.B.hard = TRUE)
 conf_mat; calculate_clustering_metrics(conf_mat)
 
-# use two classificaitons with same number of classes, so percentage agreement can be calculated
+# two classifications with same number of classes, enables percentage agreement
 conf_mat <- get_conf_mat(my_soft_mat1, my_soft_mat1)
 conf_mat; calculate_clustering_metrics(conf_mat)
 

@@ -1,0 +1,106 @@
+---
+title: "c2c workflow"
+author: "Mitchell Lyons"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{c2c workflow}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# What is c2c?
+An R package for comparing two classifications or clustering solutions that have different structures - i.e. the two classifications have a different number of classes, or one classification has soft membership and one classification has hard membership. You can create a confusion matrix (error matrix) and then calculate various metrics to assess how the clusters compare to each other. The calculations are simple, but provide a handy tool for users unfamiliar with matrix multiplication. The helper functions also help you to do things like make a soft classification into a hard one, or turn a set of class labels into a binary classification matrix.
+
+# How to use c2c
+The basic premise is that you already have two (or more perhaps) classifications that you would like compare - these could be from a clustering algorithm, extracted from a remote sensing map, a set of classes assigned manually etc. There already exist a number of tools and packages to calculate cluster diagnostics or accuracy metrics, but they are usually focused on comparing clustering solutions that are hard (i.e. each observation has only one class) and have the same number of classes (e.g. clustering solution vs. the 'truth'). c2c is designed to allow you to compare classifications that to not fit into this scenario. The motivating problem was the need to compare a probabilistic clustering of vegetation data to an existing hard classification (which had a hierarchy with of numbers of classes) of that data, without losing the probabilistic component that the clustering algorithm produces.
+
+# An example with the iris data
+In this vignette we will work through a simple, but hopefully useful, example using the iris data set. We will use a fuzzy clustering algorithm from the ```e1071``` package.
+
+```{r}
+library(c2c)
+library(e1071)
+```
+
+Load the iris data set, and prep for clustering
+```{r}
+data(iris)
+iris_dat <- iris[,-5]
+```
+
+Let's start with a cluster analysis with 3 groups, since we know that's where we're headed, and extract the soft classification matrix
+```{r}
+fcm3 <- cmeans(x = iris_dat, centers = 3)
+fcm3_probs <- fcm3$membership
+```
+
+Now we want to compare that soft matrix to a set of hard labels; we'll use the species names. ```get_conf_mat``` produces the confusion matrix, and it take two inputs - they can be a matrix or a set of labels
+```{r}
+get_conf_mat(fcm3_probs, iris$Species)
+```
+
+The output confusion matrix shows us the number of shared sites between our clustering solution and the set of labels (species in this case), accounting for the probabalistic memberships. We can see here that our 3 clusters have very clear fidelity to the species. We can also see what the relationship is like if we degrade the clustering to hard labels (this is the case of a traditional error matrix/accuracy assessment)
+```{r}
+get_conf_mat(fcm3_probs, iris$Species, make.A.hard = TRUE)
+```
+
+Nice, a little confusion between versicolor and virginica. Let's try more clusters and see if we can tease it apart
+
+```{r}
+fcm6 <- cmeans(x = iris_dat, centers = 10)
+fcm6_probs <- fcm6$membership
+get_conf_mat(fcm6_probs, iris$Species)
+get_conf_mat(fcm6_probs, iris$Species, make.A.hard = TRUE)
+```
+
+Cleans things up somewhat, but note the uncertainty is hidden when you compare hard clustering. As an aside, when you set ```make.A.hard = TRUE```, the function ```get_hard``` is being used, it might be useful elsewhere. Similarly, when you pass a vector of labels to ```get_conf_mat``` the function ```labels_to_matrix``` makes the binary classification matrix.
+
+```{r}
+head(get_hard(fcm3_probs))
+head(labels_to_matrix(iris$Species))
+```
+
+You can also compare two soft matrices, for example were could compare the 3- and 10-class classifications we just made
+```{r}
+get_conf_mat(fcm3_probs, fcm6_probs)
+```
+
+or we could directly compare two vectors of labels, which is a different way of doing what we already did above.
+```{r}
+get_conf_mat(fcm3$cluster, iris$Species)
+```
+
+Examining the confusion matrix can be enlightening just by itself, but it can be useful to have some more quantitative metrics, particularly if you're comparing lots of classifications. For exmaple you may be trying to optimise clustering parameters or maybe you're comparing lots of different clustering solutions. ```calculate_clustering_metrics``` does this
+
+```{r}
+conf_mat <- get_conf_mat(fcm3_probs, iris$Species)
+calculate_clustering_metrics(conf_mat)
+```
+
+Purity and entropy are as defined in Manning et al. (2008). Overall and per-class metrics are included, as both have uses in different situations. See Lyons et al. (2017) and Foster et al. (2017) for use on a model-based vegetation clustering example. Finally, not the message there about percentage agreement - as it says, only use it if the clustering solutions have the same class order, or are numbers for example, which should stay in order. For a decent classification, it shouldn't differ much from purity anyway.
+
+
+## References
+Foster, Hill and Lyons (2017). "Ecological Grouping of Survey Sites when 
+Sampling Artefacts are Present". Journal of the Royal Statistical Society: 
+Series C (Applied Statistics). DOI: http://dx.doi.org/10.1111/rssc.12211
+
+Lyons, Foster and Keith (2017). Simultaneous vegetation classification and mapping at
+large spatial scales. Journal of Biogeography.
+
+Manning, Raghavan and Schütze (2008). Introduction to information retrieval (Vol. 1, No. 1). Cambridge: Cambridge university press.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

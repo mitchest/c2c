@@ -14,8 +14,6 @@ Description: Compare two classifications that may or may not have the same
     This package is not geared towards traditional accuracy assessment for
     classification/mapping applications - there are plenty of existing 
     packages if that is all you need to do.
-Imports:
-    dplyr
 Depends:
     R (>= 3.1.0)
 URL: https://github.com/mitchest/c2c/

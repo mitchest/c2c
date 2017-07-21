@@ -102,7 +102,7 @@ about them - either directly on github, or the contact details below.
 * mitchell.lyons@gmail.com / mitchell.lyons@unsw.edu.au
 
 ### References
-Lyons et al. (2017). Simultaneous vegetation classification and mapping at
+Lyons, Foster and Keith (2017). Simultaneous vegetation classification and mapping at
 large spatial scales. Journal of Biogeography.
 
 Foster, Hill and Lyons (2017) "Ecological Grouping of Survey Sites when 

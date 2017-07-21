@@ -13,5 +13,5 @@ percentage_agreement(conf_mat)
 A scaler, percentage agreement (sometime refered to as overall accuracy)
 }
 \description{
-Used to calcualte overall percentage agreement for a confusion matrix - the confusion matrix must have equal dimensions (percentage agreemnt does not make sense otherwise)
+Used to calcualte overall percentage agreement for a confusion matrix - the confusion matrix must have equal dimensions and the diagonal must represent 'matching' class pairs (percentage agreement does not make sense otherwise)
 }

@@ -38,7 +38,7 @@ overall_purity <- function(conf_mat) {
 
 #' @title Calculate overall percentage agreement
 #'
-#' @description Used to calcualte overall percentage agreement for a confusion matrix - the confusion matrix must have equal dimensions (percentage agreemnt does not make sense otherwise)
+#' @description Used to calcualte overall percentage agreement for a confusion matrix - the confusion matrix must have equal dimensions and the diagonal must represent 'matching' class pairs (percentage agreement does not make sense otherwise)
 #'
 #' @param conf_mat A confusion matrix from \code{\link[c2c]{get_conf_mat}} or otherwise (ideally a matrix, although data frames will probably work)
 #'

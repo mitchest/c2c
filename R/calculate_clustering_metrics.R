@@ -4,13 +4,13 @@
 #'
 #' @param conf_mat a confusion matrix, as produced by \code{\link[c2c]{get_conf_mat}}, or otherwise a confusion matrix of the same form.
 #'
-#' @details Entropy calculated via \code{\link[c2c]{overall_entropy}} and \code{\link[c2c]{class_entropy}}, purity calculated via \code{\link[c2c]{overall_purity}} and \code{\link[c2c]{class_purity}}, percentage agreement calculated via \code{\link[c2c]{percentage_agreement}} (only for confusion matrcies of equal dimensions)
+#' @details Entropy calculated via \code{\link[c2c]{overall_entropy}} and \code{\link[c2c]{class_entropy}}, purity calculated via \code{\link[c2c]{overall_purity}} and \code{\link[c2c]{class_purity}}, percentage agreement calculated via \code{\link[c2c]{percentage_agreement}} (only for confusion matrcies of equal dimensions and matching class order)
 #'
 #' @return A list containing the metrics that can be calculated, see details.
 #'
 #' @author Mitchell Lyons
 #'
-#' @references Lyons et al. 2017. Simultaneous vegetation classification and mapping at large spatial scales. \emph{Journal of Biogeography}.
+#' @references Lyons, Foster and Keith (2017). Simultaneous vegetation classification and mapping at large spatial scales. \emph{Journal of Biogeography}.
 #'
 #' @seealso \code{\link[c2c]{get_conf_mat}}, \code{\link[c2c]{labels_to_matrix}}, \code{\link[c2c]{get_hard}}
 #'
@@ -46,6 +46,7 @@
 calculate_clustering_metrics <- function(conf_mat) {
   out_list <- list()
   if (dim(conf_mat)[1] == dim(conf_mat)[2]) {
+    message("Percentage agreement WILL be calculated: it will only make sense if the confusion matrix diagonal corresponds to matching classes (i.e. rows and columns are in the same class order)")
     out_list[["percentage_agreement"]] <- percentage_agreement(conf_mat)
   } else {
     message("Input matrix implies different number of classes, so percentage agreement WILL NOT be calculated")

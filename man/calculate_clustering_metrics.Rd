@@ -16,7 +16,7 @@ A list containing the metrics that can be calculated, see details.
 Calculate a range of clustering metrics on a confusion confusion matrix, usually from \code{\link[c2c]{get_conf_mat}}.
 }
 \details{
-Entropy calculated via \code{\link[c2c]{overall_entropy}} and \code{\link[c2c]{class_entropy}}, purity calculated via \code{\link[c2c]{overall_purity}} and \code{\link[c2c]{class_purity}}, percentage agreement calculated via \code{\link[c2c]{percentage_agreement}} (only for confusion matrcies of equal dimensions)
+Entropy calculated via \code{\link[c2c]{overall_entropy}} and \code{\link[c2c]{class_entropy}}, purity calculated via \code{\link[c2c]{overall_purity}} and \code{\link[c2c]{class_purity}}, percentage agreement calculated via \code{\link[c2c]{percentage_agreement}} (only for confusion matrcies of equal dimensions and matching class order)
 }
 \examples{
 # meaningless data, but you get the idea
@@ -45,7 +45,7 @@ conf_mat; calculate_clustering_metrics(conf_mat)
 
 }
 \references{
-Lyons et al. 2017. Simultaneous vegetation classification and mapping at large spatial scales. \emph{Journal of Biogeography}.
+Lyons, Foster and Keith (2017). Simultaneous vegetation classification and mapping at large spatial scales. \emph{Journal of Biogeography}.
 }
 \seealso{
 \code{\link[c2c]{get_conf_mat}}, \code{\link[c2c]{labels_to_matrix}}, \code{\link[c2c]{get_hard}}

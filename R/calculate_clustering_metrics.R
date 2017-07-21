@@ -17,6 +17,8 @@
 #' @keywords confusion matrix, cluster metrics, accuracy
 #'
 #' @examples
+#' # meaningless data, but you get the idea
+#'
 #' # compare two soft classifications
 #' my_soft_mat1 <- matrix(runif(50,0,1), nrow = 10, ncol = 5)
 #' my_soft_mat2 <- matrix(runif(30,0,1), nrow = 10, ncol = 3)

@@ -19,6 +19,8 @@ Calculate a range of clustering metrics on a confusion confusion matrix, usually
 Entropy calculated via \code{\link[c2c]{overall_entropy}} and \code{\link[c2c]{class_entropy}}, purity calculated via \code{\link[c2c]{overall_purity}} and \code{\link[c2c]{class_purity}}, percentage agreement calculated via \code{\link[c2c]{percentage_agreement}} (only for confusion matrcies of equal dimensions)
 }
 \examples{
+# meaningless data, but you get the idea
+
 # compare two soft classifications
 my_soft_mat1 <- matrix(runif(50,0,1), nrow = 10, ncol = 5)
 my_soft_mat2 <- matrix(runif(30,0,1), nrow = 10, ncol = 3)

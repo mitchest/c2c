@@ -55,8 +55,8 @@ get_conf_mat <- function(A, B, make.A.hard = F, make.B.hard = F) {
 
   conf_mat <- t(Amat) %*% Bmat
 
-  class(conf_mat) <- c("confmat", "matrix")
-  attr(conf_mat, "equal_dims") <- ncol(Amat) == ncol(Bmat)
+  # class(conf_mat) <- c("confmat", "matrix")
+  # attr(conf_mat, "equal_dims") <- ncol(Amat) == ncol(Bmat)
 
   conf_mat
 }

@@ -1,5 +1,5 @@
-## Submission
-This is the first submission for this package
+## First submission
+* This is the first submission for this package
 
 ## Test environments
 * local OSX install, R 3.4.1
@@ -9,13 +9,12 @@ This is the first submission for this package
 
 ## R CMD check results
 
-0 ERRORS | 0 WARNINGS | 1 NOTES
+0 ERRORS | 0 WARNINGS | 0 NOTES
 
-
-* This is a new release, so the NOTE is the new package NOTE
+* There were no ERRORs, WARNINGs or NOTEs
 
 ## Reverse dependencies
 
-This is a new release, so there are no reverse dependencies.
+* This is a new release, so there are no reverse dependencies.
 
 ---

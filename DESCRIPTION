@@ -10,7 +10,10 @@ Description: Compare two classifications that may or may not have the same
     number of classes, and that might have hard or soft (fuzzy, 
     probabilistic) membership. Calculate various metrics to assess how the
     clusters compare to each other. The calculations are simple, but
-    provide a handy tool for users unfamiliar with matrix multiplication.
+    provide a handy tool for users unfamiliar with matrix multiplication. 
+    This package is not geared towards traditional accuracy assessment for
+    classification/mapping applications - there are plenty of existing 
+    packages if that is all you need to do.
 Imports:
     dplyr
 Depends:

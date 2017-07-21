@@ -3,4 +3,4 @@
 ^\.travis\.yml$
 ^\.licence\.md$
 ^cran-comments\.md$
-^\.travis\.yml$
+^NEWS\.md$

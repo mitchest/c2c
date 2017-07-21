@@ -37,6 +37,7 @@ probabilistic component that the clustering algorithm produces.
 This example is on silly fake data, but it's quick and will run
 without any additional data or package loads. Check out the
 vignette for something a little more sensible.  
+[c2c vignette](https://rawgit.com/mitchest/c2c/master/c2c-workflow.html).  
 
 First install and load c2c
 

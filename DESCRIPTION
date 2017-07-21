@@ -22,5 +22,9 @@ BugReports: https://github.com/mitchest/c2c/issues
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Suggests: testthat  
+Suggests: testthat,
+    knitr,
+    rmarkdown,
+    e1071
 RoxygenNote: 6.0.1
+VignetteBuilder: knitr

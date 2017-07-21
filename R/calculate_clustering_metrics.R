@@ -19,15 +19,15 @@
 calculate_clustering_metrics <- function(conf_mat) {
   out_list <- list()
   if (dim(conf_mat)[1] == dim(conf_mat)[2]) {
-    out_list["percentage_agreement"] <- percentage_agreement(conf_mat)
+    out_list[["percentage_agreement"]] <- percentage_agreement(conf_mat)
   } else {
     message("Input matrix implies different number of classes, so percentage agreement WILL NOT be calculated")
   }
 
-  out_list["overall_purity"] <- overall_purity(conf_mat)
-  out_list["class_purity"] <- class_purity(conf_mat)
-  out_list["overall_entropy"] <- overall_entropy(conf_mat)
-  out_list["class_entropy"] <- class_entropy(conf_mat)
+  out_list[["overall_purity"]] <- overall_purity(conf_mat)
+  out_list[["class_purity"]] <- class_purity(conf_mat)
+  out_list[["overall_entropy"]] <- overall_entropy(conf_mat)
+  out_list[["class_entropy"]] <- class_entropy(conf_mat)
 
   out_list
 

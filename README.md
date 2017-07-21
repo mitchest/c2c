@@ -77,7 +77,7 @@ Another thing you can do within ```get_conf_mat``` is turn a soft matrix into a 
 ## Installation
 
 You can install directly from CRAN as above, or if you want to get the development version,
-which might have some new functionality, you can install from GitHub.It's very easy, simply
+which might have some new functionality, you can install from GitHub. It's very easy, simply
 use Hadley Wickham's (excellent) ```devtools``` package
 
 ```r
@@ -102,8 +102,8 @@ about them - either directly on github, or the contact details below.
 * mitchell.lyons@gmail.com / mitchell.lyons@unsw.edu.au
 
 ### References
-Lyons et al. (accpeted). Simultaneous vegetation classification and mapping at
-large spatial scales. Journal of Biogeography.  
+Lyons et al. (2017). Simultaneous vegetation classification and mapping at
+large spatial scales. Journal of Biogeography.
 
 Foster, Hill and Lyons (2017) "Ecological Grouping of Survey Sites when 
 Sampling Artefacts are Present". Journal of the Royal Statistical Society: 

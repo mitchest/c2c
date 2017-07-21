@@ -1,7 +1,7 @@
 Package: c2c
 Type: Package
 Title: Compare Two Classifications with Varying Structure
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: person("Mitchell", "Lyons", 
                   email = "mitchell.lyons@gmail.com",
                   role = c("aut", "cre"))
@@ -12,8 +12,9 @@ Description: Compare two classifications that may or may not have the same
     clusters compare to each other. The calculations are simple, but
     provide a handy tool for users unfamiliar with matrix multiplication. 
     This package is not geared towards traditional accuracy assessment for
-    classification/mapping applications - there are plenty of existing 
-    packages if that is all you need to do.
+    classification/mapping applications - the motivating use case is for 
+    comparing a probabilistic clustering solution of data that have a
+    set of reference or existing class labels with any number of classes.
 Depends:
     R (>= 3.1.0)
 URL: https://github.com/mitchest/c2c/

@@ -38,5 +38,5 @@ class_entropy <- function(conf_mat) {
 
 class_purity <- function(conf_mat) {
   list(row_purity = apply(conf_mat, 1, max) / apply(conf_mat, 1, sum),
-       column_purity = apply(conf_mat, 2, max) / apply(conf_mat, 2, sum))
+       col_purity = apply(conf_mat, 2, max) / apply(conf_mat, 2, sum))
 }

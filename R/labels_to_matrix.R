@@ -13,7 +13,7 @@
 #' @export
 
 labels_to_matrix <- function(x) {
-  x_df <- data.frame(labels = x)
+  x_df <- data.frame(labels = as.character(x))
   out_df <- as.data.frame(stats::model.matrix(~0+labels, data = x_df))
   names(out_df) <- gsub("labels", "", names(out_df))
   out_df

@@ -3,5 +3,4 @@
 ^\.travis\.yml$
 ^\.licence\.md$
 ^cran-comments\.md$
-^NEWS\.md$
 ^c2c-workflow\.html$

@@ -1,4 +1,4 @@
-#' @title Decompose soft (fuzzy, probabalistic) membership to hard binary matrix
+#' @title Decompose soft (fuzzy, probabilistic) membership to hard binary matrix
 #'
 #' @description Used in \code{\link[c2c]{get_conf_mat}} but might be useful separately
 #'

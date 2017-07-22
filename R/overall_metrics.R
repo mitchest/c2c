@@ -42,7 +42,7 @@ overall_purity <- function(conf_mat) {
 #'
 #' @param conf_mat A confusion matrix from \code{\link[c2c]{get_conf_mat}} or otherwise (ideally a matrix, although data frames will probably work)
 #'
-#' @return A scaler, percentage agreement (sometime refered to as overall accuracy)
+#' @return A scaler, percentage agreement (sometime referred to as overall accuracy)
 #'
 #' @export
 

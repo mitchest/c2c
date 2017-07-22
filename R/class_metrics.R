@@ -1,6 +1,6 @@
 #' @title Calculate cluster entropy per class
 #'
-#' @description Used to calcualte cluster entropy from a confusion matrix, for each class (i.e. each row and column of the confusion matrix).
+#' @description Used to calculate cluster entropy from a confusion matrix, for each class (i.e. each row and column of the confusion matrix).
 #'
 #' @param conf_mat A confusion matrix from \code{\link[c2c]{get_conf_mat}} or otherwise (ideally a matrix, although data frames will probably work)
 #'

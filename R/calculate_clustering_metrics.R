@@ -4,7 +4,7 @@
 #'
 #' @param conf_mat a confusion matrix, as produced by \code{\link[c2c]{get_conf_mat}}, or otherwise a confusion matrix of the same form.
 #'
-#' @details Entropy calculated via \code{\link[c2c]{overall_entropy}} and \code{\link[c2c]{class_entropy}}, purity calculated via \code{\link[c2c]{overall_purity}} and \code{\link[c2c]{class_purity}}, percentage agreement calculated via \code{\link[c2c]{percentage_agreement}} (only for confusion matrcies of equal dimensions and matching class order)
+#' @details Entropy calculated via \code{\link[c2c]{overall_entropy}} and \code{\link[c2c]{class_entropy}}, purity calculated via \code{\link[c2c]{overall_purity}} and \code{\link[c2c]{class_purity}}, percentage agreement calculated via \code{\link[c2c]{percentage_agreement}} (only for confusion matrices of equal dimensions and matching class order)
 #'
 #' @return A list containing the metrics that can be calculated, see details.
 #'

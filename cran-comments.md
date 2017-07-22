@@ -9,9 +9,9 @@
 
 ## R CMD check results
 
-0 ERRORS | 0 WARNINGS | 0 NOTES
+0 ERRORS | 0 WARNINGS | 1 NOTES
 
-* There were no ERRORs, WARNINGs or NOTEs
+* New submission NOTE
 
 ## Reverse dependencies
 

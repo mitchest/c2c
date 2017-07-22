@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_hard.R
 \name{get_hard}
 \alias{get_hard}
-\title{Decompose soft (fuzzy, probabalistic) membership to hard binary matrix}
+\title{Decompose soft (fuzzy, probabilistic) membership to hard binary matrix}
 \usage{
 get_hard(x)
 }

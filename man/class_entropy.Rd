@@ -13,7 +13,7 @@ class_entropy(conf_mat)
 A data frame with two columns, the first corresponding to the confusion matrix rows, the second corresponding to the confusion matrix columns.
 }
 \description{
-Used to calcualte cluster entropy from a confusion matrix, for each class (i.e. each row and column of the confusion matrix).
+Used to calculate cluster entropy from a confusion matrix, for each class (i.e. each row and column of the confusion matrix).
 }
 \details{
 Metrics per class are useful when you are comparing two classifications with different numbers of classes, when an overall measure might not be useful or sensible. Entropy as defined in Manning (2008).

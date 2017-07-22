@@ -10,7 +10,7 @@ percentage_agreement(conf_mat)
 \item{conf_mat}{A confusion matrix from \code{\link[c2c]{get_conf_mat}} or otherwise (ideally a matrix, although data frames will probably work)}
 }
 \value{
-A scaler, percentage agreement (sometime refered to as overall accuracy)
+A scaler, percentage agreement (sometime referred to as overall accuracy)
 }
 \description{
 Used to calcualte overall percentage agreement for a confusion matrix - the confusion matrix must have equal dimensions and the diagonal must represent 'matching' class pairs (percentage agreement does not make sense otherwise)

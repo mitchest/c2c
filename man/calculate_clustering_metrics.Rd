@@ -16,7 +16,7 @@ A list containing the metrics that can be calculated, see details.
 Calculate a range of clustering metrics on a confusion confusion matrix, usually from \code{\link[c2c]{get_conf_mat}}.
 }
 \details{
-Entropy calculated via \code{\link[c2c]{overall_entropy}} and \code{\link[c2c]{class_entropy}}, purity calculated via \code{\link[c2c]{overall_purity}} and \code{\link[c2c]{class_purity}}, percentage agreement calculated via \code{\link[c2c]{percentage_agreement}} (only for confusion matrcies of equal dimensions and matching class order)
+Entropy calculated via \code{\link[c2c]{overall_entropy}} and \code{\link[c2c]{class_entropy}}, purity calculated via \code{\link[c2c]{overall_purity}} and \code{\link[c2c]{class_purity}}, percentage agreement calculated via \code{\link[c2c]{percentage_agreement}} (only for confusion matrices of equal dimensions and matching class order)
 }
 \examples{
 # meaningless data, but you get the idea

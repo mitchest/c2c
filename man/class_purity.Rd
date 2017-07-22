@@ -12,9 +12,6 @@ class_purity(conf_mat)
 \value{
 A data frame with two columns, the first corresponding to the confusion matrix rows, the second corresponding to the confusion matrix columns.
 }
-\description{
-Used to calcualte cluster purity from a confusion matrix, for each class (i.e. each row and column of the confusion matrix).
-}
 \details{
 Metrics per class are useful when you are comparing two classifications with different numbers of classes, when an overall measure might not be useful or sensible. Purity as defined in Manning (2008).
 }

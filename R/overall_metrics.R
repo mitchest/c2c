@@ -1,6 +1,6 @@
 #' @title Calculate overall cluster entropy
 #'
-#' @description Used to calcualte overall cluster entropy from a confusion matrix.
+#' @description Used to calculate overall cluster entropy from a confusion matrix.
 #'
 #' @param conf_mat A confusion matrix from \code{\link[c2c]{get_conf_mat}} or otherwise (ideally a matrix, although data frames will probably work)
 #'
@@ -21,7 +21,7 @@ overall_entropy <- function(conf_mat) {
 
 #' @title Calculate overall cluster purity
 #'
-#' @description Used to calcualte overall cluster purity from a confusion matrix.
+#' @description Used to calculate overall cluster purity from a confusion matrix.
 #'
 #' @param conf_mat A confusion matrix from \code{\link[c2c]{get_conf_mat}} or otherwise (ideally a matrix, although data frames will probably work)
 #'
@@ -38,7 +38,7 @@ overall_purity <- function(conf_mat) {
 
 #' @title Calculate overall percentage agreement
 #'
-#' @description Used to calcualte overall percentage agreement for a confusion matrix - the confusion matrix must have equal dimensions and the diagonal must represent 'matching' class pairs (percentage agreement does not make sense otherwise)
+#' @description Used to calculate overall percentage agreement for a confusion matrix - the confusion matrix must have equal dimensions and the diagonal must represent 'matching' class pairs (percentage agreement does not make sense otherwise)
 #'
 #' @param conf_mat A confusion matrix from \code{\link[c2c]{get_conf_mat}} or otherwise (ideally a matrix, although data frames will probably work)
 #'

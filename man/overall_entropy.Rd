@@ -13,7 +13,7 @@ overall_entropy(conf_mat)
 A scaler, cluster entropy as defined in Manning (2008)
 }
 \description{
-Used to calcualte overall cluster entropy from a confusion matrix.
+Used to calculate overall cluster entropy from a confusion matrix.
 }
 \references{
 Manning, C. D., Raghavan, P., & Schütze, H. (2008) Introduction to information retrieval (Vol. 1, No. 1). Cambridge: Cambridge university press.

@@ -13,7 +13,7 @@ overall_purity(conf_mat)
 A scaler, cluster purity as defined in Manning (2008)
 }
 \description{
-Used to calcualte overall cluster purity from a confusion matrix.
+Used to calculate overall cluster purity from a confusion matrix.
 }
 \references{
 Manning, C. D., Raghavan, P., & Schütze, H. (2008) Introduction to information retrieval (Vol. 1, No. 1). Cambridge: Cambridge university press.

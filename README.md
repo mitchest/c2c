@@ -77,7 +77,13 @@ Another thing you can do within ```get_conf_mat``` is turn a soft matrix into a 
 
 ## Installation
 
-You can install directly from CRAN as above, or if you want to get the development version,
+You can install directly from CRAN as above
+
+```r
+install.packages("c2c")
+```
+
+or if you want to get the development version,
 which might have some new functionality, you can install from GitHub. It's very easy, simply
 use Hadley Wickham's (excellent) ```devtools``` package
 

@@ -15,7 +15,7 @@ Description: Compare two classifications or clustering solutions that may or may
     mapping applications - the motivating use case is for comparing a
     probabilistic clustering solution to a set of reference or existing class
     labels that could have any number of classes (that is, without having to
-    degrade the probablistic clustering to hard classes).
+    degrade the probabilistic clustering to hard classes).
 Depends:
     R (>= 3.1.0)
 URL: https://github.com/mitchest/c2c/

@@ -1,5 +1,5 @@
-## First submission
-* This is the first submission for this package
+## Resubmission
+* Updating to a better package title, no other issues were flagged in previous submission
 
 ## Test environments
 * local OSX install, R 3.4.1

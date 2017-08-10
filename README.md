@@ -1,5 +1,6 @@
 c2c
 ===========
+[![](http://cranlogs.r-pkg.org/badges/c2c)](http://cran.rstudio.com/web/packages/c2c/index.html)
 [![Build Status](https://api.travis-ci.org/mitchest/c2c.svg)](https://travis-ci.org/mitchest/c2c)  
 
 ## What is c2c?
